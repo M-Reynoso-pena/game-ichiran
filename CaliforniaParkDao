@@ -1,0 +1,21 @@
+package com.example.test
+
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.Query
+import com.example.test.CaliforniaPark
+
+//Requetes sql a travers des fonctions
+@Dao
+interface CaliforniaParkDao {
+    @Insert
+    suspend fun insertAll(jeux: List<CaliforniaPark>)
+    @Query("SELECT * FROM jeu")
+    suspend fun getAll(): List<CaliforniaPark>
+    @Query("SELECT PRIX FROM jeu WHERE ID = :id")
+    suspend fun getPrice(id: Int): Double
+
+    @Query("SELECT TITRE FROM jeu WHERE ID = :id")
+    suspend fun getName(id: Int): String
+
+}
