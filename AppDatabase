@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 
 @Database(entities = [CaliforniaPark::class], version = 1)//(entities = arrayOf(CaliforniaPark::class), version = 1)->OLD
 abstract class AppDatabase: RoomDatabase() {
-    //abstract fun californiaParkDao(): CaliforniaParkDao
+    abstract fun californiaParkDao(): CaliforniaParkDao
 
     companion object {
         @Volatile
