@@ -1,0 +1,26 @@
+package com.example.test
+
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "jeu")
+data class CaliforniaPark(
+    @PrimaryKey(autoGenerate = true) val id: Int,
+    @ColumnInfo(name = "TITRE") val titre: String,
+    @ColumnInfo(name = "PRIX") val prix: Double,
+    @ColumnInfo(name = "NB_JOUEURS_SOLO") val nb_solo: Boolean,
+    @ColumnInfo(name = "NB_JOUEURS_MULTI") val nb_multi: Boolean,
+    @ColumnInfo(name = "SOLO") val solo: Boolean,
+    @ColumnInfo(name = "ONLINE") val online: Boolean,
+    @ColumnInfo(name = "PS3") val ps3: Boolean,
+    @ColumnInfo(name = "PS4") val ps4: Boolean,
+    @ColumnInfo(name = "PS5") val ps5: Boolean,
+    @ColumnInfo(name = "XBOX_360") val xbox_360: Boolean,
+    @ColumnInfo(name = "XBOX_ONE") val xbox_one: Boolean,
+    @ColumnInfo(name = "XBOX_X") val xbox_x: Boolean,
+    @ColumnInfo(name = "PC") val pc: Boolean,
+    @ColumnInfo(name = "SWITCH") val switch: Boolean,
+    @ColumnInfo(name = "KEYBOARD") val keyboard: Boolean,
+    @ColumnInfo(name = "CONTROLLER") val manette: Boolean
+)
